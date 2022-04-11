@@ -1,11 +1,11 @@
 import React from 'react';
 import '../App.css';
 
-function Modal() {
+function Modal (props) {
   return (
     <div className="Modal">
-      <h2>제목</h2>
-      <p>날짜</p>
+      <h2>{props.titleList[props.only].title}</h2>
+      <p>{props.titleList[props.only].text}</p>
       <p>상세내용</p>
     </div>
   );

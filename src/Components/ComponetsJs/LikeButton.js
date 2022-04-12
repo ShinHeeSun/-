@@ -7,13 +7,10 @@ function LikeButton() {
     setLike(like + 1);
   };
 
-
   return (
-    <div>
-      <h4>
-        <span onClick={likeClike}>👍{like}</span>{' '}
-      </h4>
-    </div>
+    <>
+      <span className='likeButton' onClick={likeClike}>👍{like}</span>{' '}
+    </>
   );
 }
 export default LikeButton;

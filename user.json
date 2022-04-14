@@ -1,5 +1,14 @@
 {
   "user": [
-   
+    {
+      "id": "sbs2110",
+      "nick": "sbs2110",
+      "password": "1234"
+    },
+    {
+      "id": "aaaa",
+      "nick": "aaa",
+      "password": "1234"
+    }
   ]
 }

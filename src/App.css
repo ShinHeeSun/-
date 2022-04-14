@@ -5,9 +5,24 @@ body {
     -ms-user-select: 'none';
     -moz-user-select: 'none';
     -webkit-user-select: none;
-
 }
-
+.menu{
+  margin-top: 20px;
+}
+.menuList {
+  margin: 0px;
+  border:1px solid black ;
+  background-image: cover;
+}
+.menu h5 {
+  padding-left: 10px;
+  margin: 0;
+}
+.menu p {
+  text-align: end;
+  padding-right: 10px;
+  margin: 0;
+}
 .black-nav {
   background-color: black;
   width: 100%;

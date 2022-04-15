@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flag } from 'semantic-ui-react';
+
 import axios from 'axios';
 
 function Login1() {

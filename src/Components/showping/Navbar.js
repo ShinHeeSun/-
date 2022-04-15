@@ -1,43 +1,42 @@
-import React from "react"
-import logo from '../../img/logo.png'
-import {
-    Button,
-    Navbar,
-    Container,
-    Nav,
-    Form,
-    FormControl,
-  } from 'react-bootstrap'
+import React from 'react';
+import logo from '../../img/logo.png';
+import '../../App.css';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-  function NavBar () {
-    return (
-      <>
-
-<Navbar bg="light" variant="light">
+function NavBar() {
+  return (
+    <>
+      <Navbar collapseOnSelect expand="lg" bg="light">
         <Container>
-          <Navbar.Brand href="#home">
-            <a href="...">
-              {' '}
-              <img className="logoName" src={logo} let="logo" alt="..." />
-            </a>
+          <Navbar.Brand as={Link} to="/">
+            <img src={logo} alt="logo" />
           </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="/Menu">
+                Menu
+              </Nav.Link>
+
+              <Nav.Link as={Link} to="/ssss">
+                sssss
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link as={Link} to="/Login">
+                로그인
+              </Nav.Link>
+
+              <Nav.Link as={Link} to="/Join">
+                회원가입
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
-      </>
-);
+    </>
+  );
 }
 export default NavBar;

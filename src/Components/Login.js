@@ -16,8 +16,8 @@ class Login extends React.Component {
       clicked: true,
       validated: this.state.password === '0000',
     });
-    this.input.focus();
-  };
+    this.input.focus()
+  };;
 
   render() {
     return (

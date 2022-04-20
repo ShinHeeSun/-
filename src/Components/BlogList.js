@@ -11,7 +11,7 @@ function BlogList() {
   ]);
   const [inputText, setInputText] = useState('');
   const [inputText1, setInputText1] = useState('');
-  const [nextId, setNextIde] = useState(4);
+  const [nextId, setNextId] = useState(4);
 
   const onChange = (e) => setInputText(e.target.value);
   const onChange1 = (e) => setInputText1(e.target.value);
@@ -27,7 +27,7 @@ function BlogList() {
       title: inputText,
       text: inputText1,
     });
-    setNextIde(nextId + 1);
+    setNextId(nextId + 1);
     setTitleList(nextNames);
     setInputText('');
     setInputText1('');

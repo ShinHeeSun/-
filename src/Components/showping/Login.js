@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import logo from '../../img/logo.png'
 import axios from 'axios';
 
 function Login1() {
@@ -21,15 +21,20 @@ function Login1() {
     });
   };
   return (
-    <>
-      <input onChange={onChangeId} type="text" placeholder="Id"></input>
+    <div className='login'>
+      <img src={logo} alt=""  />
+      <input onChange={onChangeId} type="text" placeholder="Id"
+      style={{marginTop:'20px'}}></input>
+      <br />
       <input
         onChange={onChangePassword}
         type="password"
         placeholder="password"
-      ></input>
-      <button onClick={onClick}>qjxms</button>
-    </>
+        style={{marginTop:'20px'}}
+      ></input> <br />
+      <button onClick={onClick}
+      style={{marginTop:'20px'}}>로그인</button>
+    </div>
   );
 }
 export default Login1;

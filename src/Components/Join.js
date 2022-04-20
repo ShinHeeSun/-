@@ -63,7 +63,11 @@ function Join() {
     setTerm(e.target.checked);
   };
   return (
-    <>
+    <div className='join'>
+            <h1>
+        방쿡 회원 가입
+      </h1>
+
       <form
         className="form"
         onSubmit={onSubmit}
@@ -73,6 +77,7 @@ function Join() {
           flexDirection: 'column',
         }}
       >
+
         <div>
           <label htmlFor="user-id">아이디</label>
           <br />
@@ -135,7 +140,7 @@ function Join() {
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 }
 

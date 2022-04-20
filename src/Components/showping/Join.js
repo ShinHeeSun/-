@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import logo from '../../img/logo.png'
 
 function Join() {
   const [id, setId] = useState('');
@@ -33,7 +34,7 @@ function Join() {
   const onClick = () => {
     axios({
       method: 'post',
-      url: 'http://localhost:3001/user',
+      url: 'http://localhost:3001/db',
       data: {
         id,
         nick,
@@ -63,12 +64,15 @@ function Join() {
     setTerm(e.target.checked);
   };
   return (
-    <>
+    <div className='join'>
+    <img src={logo} alt='' />
+
+
       <form
-        className="form"
+ 
         onSubmit={onSubmit}
         style={{
-          padding: 10,
+          padding: 0,
           display: 'flex',
           flexDirection: 'column',
         }}
@@ -115,7 +119,7 @@ function Join() {
         </div>
         <div>
           <input
-            className="form-check-input checkbox"
+            className="form-check-input checkbox "
             type="checkbox"
             id="flexCheckDefault"
             name="user-term"
@@ -130,12 +134,12 @@ function Join() {
           )}
         </div>
         <div style={{ marginTop: 10 }}>
-          <button type="submit" onClick={onClick}>
+          <button className='btn btn-outline-secondary' type="submit" onClick={onClick}>
             가입하기
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 }
 
